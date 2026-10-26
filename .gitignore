@@ -1,0 +1,27 @@
+# Backups and temporary files
+*.bak*
+*.tmp
+*.log
+
+# Diagnostic and test scripts
+*.mjs
+check_*.py
+inspect_*.py
+measure_*.py
+crop_*.py
+simple_*.py
+save_*.py
+locate_*.py
+list_*.py
+print_*.py
+find_*.py
+fix_*.py
+update_*.py
+
+# Test / audit screenshots
+audit_*.png
+ss_*.png
+screenshot_*.png
+screenshot_*.jpg
+test_*.png
+test_*.jpg
