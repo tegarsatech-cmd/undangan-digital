@@ -1788,56 +1788,79 @@ html.guest-mode #editGalleryControls {
   100% { transform: translate3d(70%, 0, 0) scale(1.0); }
 }
 
-/* Tombol Hotspot Tunggal Presisi di atas "LIHAT UNDANGAN" lukisan Joglo (Top: 81.24%) */
+/* Tombol Eksklusif "LIHAT UNDANGAN" Adat Jawa (Solid Royal Maroon & Gold) */
 .btn-hotspot-container {
   position: absolute !important;
   top: 81.24% !important;
   left: 50% !important;
   transform: translate(-50%, -50%) !important;
-  z-index: 35 !important;
+  z-index: 40 !important;
   display: flex !important;
   flex-direction: column !important;
   align-items: center !important;
   justify-content: center !important;
   pointer-events: auto !important;
-  width: clamp(280px, 25vw, 360px) !important;
-  height: 54px !important;
+  width: clamp(270px, 22vw, 320px) !important;
+  height: 48px !important;
 }
 
 .btn-lihat-undangan-hotspot {
   position: relative !important;
-  display: block !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 10px !important;
   width: 100% !important;
   height: 100% !important;
-  background: transparent !important;
-  border: 1.5px solid transparent !important;
   border-radius: 999px !important;
-  box-shadow: none !important;
+  background: linear-gradient(135deg, #7c141e 0%, #46070f 50%, #290308 100%) !important;
+  border: 1.5px solid #d4af37 !important;
+  box-shadow: 
+    0 0 0 1px rgba(60, 5, 10, 0.8),
+    0 8px 24px rgba(0, 0, 0, 0.75),
+    0 0 20px rgba(212, 175, 55, 0.4),
+    inset 0 1px 0 rgba(255, 230, 160, 0.35) !important;
+  color: #fcf1d8 !important;
+  font-family: 'Cinzel', Georgia, serif !important;
+  font-size: 0.88rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.15em !important;
+  text-transform: uppercase !important;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.9), 0 0 10px rgba(212, 175, 55, 0.5) !important;
+  white-space: nowrap !important;
   cursor: pointer !important;
   outline: none !important;
   pointer-events: auto !important;
-  transition: all 0.25s ease !important;
+  transition: all 0.25s cubic-bezier(0.2, 0.8, 0.3, 1) !important;
   -webkit-tap-highlight-color: transparent !important;
 }
 
-/* Hapus elemen teks/icon buatan agar HANYA 1 tombol asli "LIHAT UNDANGAN" yang terlihat */
-.btn-lihat-undangan-hotspot:before,
-.btn-lihat-undangan-hotspot:after {
-  display: none !important;
-  content: "" !important;
+.btn-lihat-undangan-hotspot .btn-text {
+  white-space: nowrap !important;
+  display: inline-block !important;
 }
 
-/* Efek cahaya emas anggun saat tombol disentuh atau kursor melintas */
 .btn-lihat-undangan-hotspot:hover,
 .btn-lihat-undangan-hotspot:focus-visible {
-  border-color: rgba(230, 195, 120, 0.75) !important;
-  box-shadow: 0 0 26px rgba(245, 215, 146, 0.65), inset 0 0 16px rgba(255, 230, 160, 0.35) !important;
-  transform: scale(1.025) !important;
+  transform: scale(1.03) !important;
+  border-color: #ffd885 !important;
+  box-shadow: 
+    0 0 0 1px rgba(90, 10, 18, 0.9),
+    0 10px 30px rgba(0, 0, 0, 0.85),
+    0 0 28px rgba(255, 220, 140, 0.7),
+    inset 0 1px 0 rgba(255, 245, 200, 0.6) !important;
 }
 
 .btn-lihat-undangan-hotspot:active {
-  transform: scale(0.975) !important;
-  box-shadow: 0 0 15px rgba(245, 215, 146, 0.4) !important;
+  transform: scale(0.97) !important;
+}
+
+.btn-ornament-left,
+.btn-ornament-right {
+  font-size: 0.68rem !important;
+  color: #dfae52 !important;
+  text-shadow: 0 0 8px rgba(255, 220, 120, 0.8) !important;
+  user-select: none !important;
 }
 
 .mouse-scroll-hotspot {
@@ -1875,9 +1898,9 @@ html.guest-mode #editGalleryControls {
 
 @media (max-width: 600px) {
   .btn-hotspot-container {
-    width: 250px !important;
-    height: 44px !important;
-    top: 75.2% !important;
+    width: clamp(266px, 68vw, 298px) !important;
+    height: 48px !important;
+    top: calc(50% + 209px) !important;
   }
   .top-control-bar {
     top: 14px !important;
@@ -1932,7 +1955,7 @@ html.guest-mode #editGalleryControls {
     width: 100% !important;
     height: 100% !important;
     background-size: 1260px auto !important;
-    background-position: center 46% !important;
+    background-position: center center !important;
     background-repeat: no-repeat !important;
     -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 6%, black 93%, transparent 100%) !important;
     mask-image: linear-gradient(to bottom, transparent 0%, black 6%, black 93%, transparent 100%) !important;
@@ -1949,12 +1972,12 @@ html.guest-mode #editGalleryControls {
   }
   .btn-hotspot-container {
     position: absolute !important;
-    top: 75.2% !important;
+    top: calc(50% + 209px) !important;
     left: 50% !important;
     transform: translate(-50%, -50%) !important;
-    width: 250px !important;
-    height: 44px !important;
-    z-index: 35 !important;
+    width: clamp(266px, 68vw, 298px) !important;
+    height: 48px !important;
+    z-index: 40 !important;
   }
   .btn-lihat-undangan-hotspot {
     width: 100% !important;
@@ -2018,7 +2041,11 @@ html.guest-mode #editGalleryControls {
   </div>
   
     <div class="btn-hotspot-container">
-      <button id="btn-lihat-undangan" class="btn-lihat-undangan-hotspot" type="button" aria-label="Lihat Undangan" title="Lihat Undangan"></button>
+      <button id="btn-lihat-undangan" class="btn-lihat-undangan-hotspot" type="button" aria-label="Lihat Undangan" title="Lihat Undangan">
+        <span class="btn-ornament-left" aria-hidden="true">&#9670;</span>
+        <span class="btn-text">LIHAT UNDANGAN</span>
+        <span class="btn-ornament-right" aria-hidden="true">&#9670;</span>
+      </button>
     </div>
 
   </div>
